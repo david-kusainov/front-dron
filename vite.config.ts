@@ -1,8 +1,10 @@
+// vite.config.js
+
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import mkcert from 'vite-plugin-mkcert'
 import path from 'path'
-// https://vitejs.dev/config/  .
+
 export default defineConfig(() => {
   return {
     plugins: [
@@ -11,7 +13,10 @@ export default defineConfig(() => {
     ],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, './src'),
+        '@widgets': path.resolve(__dirname, "src/widgets"),
+        '@shared': path.resolve(__dirname, "src/shared"),
+        '@features': path.resolve(__dirname, "src/features"),
+        '@entities': path.resolve(__dirname, "src/entities"),
       },
     },
     server: {
