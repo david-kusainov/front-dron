@@ -6,7 +6,7 @@ import { ConfigProvider } from 'antd'
 
 const customTheme = {
   token: {
-    colorPrimary: '#1DA57A',
+    colorPrimary: '#0B6623',
   },
 }
 

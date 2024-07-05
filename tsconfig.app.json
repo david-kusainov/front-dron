@@ -30,6 +30,7 @@
       "@shared/*": ["shared/*"],
       "@features/*": ["features/*"],
       "@entities/*": ["entities/*"],
+      "@public/*": ["public/*"],
     },
   },
   "include": ["src"]

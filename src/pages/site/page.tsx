@@ -1,10 +1,15 @@
-import { SiteLayout } from "@widgets/site-layout"
+import { ForWhomBlock } from "@widgets/for-whom/ui"
+import { SiteLayout } from "@widgets/layouts/site-layout"
+import { ForWhatBlock } from "@widgets/for-what/ui"
+import { TryService } from "@widgets/try-service/ui"
 
 export const Home = () => {
 
   return (
     <SiteLayout>
-      123
+      <TryService />
+      <ForWhatBlock />
+      <ForWhomBlock />
     </SiteLayout>
   )
 }
