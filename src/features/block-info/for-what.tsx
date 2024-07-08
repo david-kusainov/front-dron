@@ -16,8 +16,8 @@ export const ForWhat = (props: {src: any, children: ReactNode}) => {
 
 const CardInfo = styled(Card)`
   border-radius: 66px;
-  width: 21vw;
-  height: 30vh;
+  width: 90%;
+  height: 110%;
   text-align: center;
   box-shadow: 30px 40px 15px rgba(0, 0, 0, 0.1);
 `

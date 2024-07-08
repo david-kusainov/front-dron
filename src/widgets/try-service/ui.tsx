@@ -16,18 +16,17 @@ export const TryService = () => {
           Попробовать
         </Button>
       </Block>
-      <img src={pc_with_camera} width={600}/>
+      <img src={pc_with_camera}/>
     </Box>
   )
 }
 
 const Box = styled.div`
   display: grid;
-  grid-template-columns: 1200px auto;
+  grid-template-columns: 50% auto;
   border-top: 2px solid #0B6623;
   background-color: white;
   padding: 90px;
-  height: 58vh;
 `
 const Title = styled.div`
   color: #0B6623;

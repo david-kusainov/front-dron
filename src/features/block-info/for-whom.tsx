@@ -24,10 +24,11 @@ const TitleInfo = styled.div`
 `
 const CardInfo = styled(Card)`
   border-radius: 66px;
-  width: 30vw;
-  height: 30vh;
+  width: 90%;
+  height: 120%;
   text-align: center;
   box-shadow: 30px 40px 15px rgba(0, 0, 0, 0.1);
+  background-color: #E7F0E9;
 `
 const Text = styled.div`
   text-align: center;
