@@ -67,7 +67,7 @@
             <IndicatorText>
               <TitleProcent>10%</TitleProcent> увеличение урожайности
             </IndicatorText>
-            <IndicatorText>
+            <IndicatorText style={{ position: 'relative', top:'45%'}}>
               <TitleProcent>90%</TitleProcent> уменьшение применения гербицидов
             </IndicatorText>
             <IndicatorText>
@@ -139,8 +139,9 @@ const More = styled.div`
 `
 const IndicatorContent = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 30%);
-  grid-template-rows: repeat(3, 30%);
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, auto);
+  width: min-content;
   position: relative;
   top: 55%;
   left: 50%; 
@@ -150,5 +151,4 @@ const TitleProcent = styled.div`
 `
 const IndicatorText = styled.div`
   font-size: 25px;
-  width: 10%;
 `

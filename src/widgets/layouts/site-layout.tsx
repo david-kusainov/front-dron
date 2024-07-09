@@ -1,6 +1,7 @@
+import { Footer } from '@features/footer/footer'
 import { Header } from '@features/header/header'
 import { Layout } from 'antd'
-import { Content, Footer} from 'antd/es/layout/layout'
+import { Content} from 'antd/es/layout/layout'
 import { ReactNode } from 'react'
 
 interface SiteLayoutProps {
@@ -13,7 +14,7 @@ export const SiteLayout = ({ children }: SiteLayoutProps) => {
     <Layout style={{ minHeight: '100vh'}}>
       <Header/>
       <Content>{children}</Content>
-      <Footer>123</Footer>
+      <Footer/>
     </Layout>
   )
 }
