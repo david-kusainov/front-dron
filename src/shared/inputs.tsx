@@ -25,6 +25,7 @@ export function InputField<T extends string | number | undefined | null>(props: 
       <Input
         value={props.field && props?.field.value || ""}
         onChange={(e) => props.field && props.field.onChange(e.target.value as T)}
+        style={{borderRadius: '20px'}}
         {...props}
       />
       {props.field && <ErrorValidate field={props.field} />}
