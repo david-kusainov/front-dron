@@ -84,71 +84,71 @@
     )
   }
 
-  const Wrapper = styled.div`
-    border-top: 2px solid #0B6623; 
-    text-align: center;
-    padding: 80px 40px 0 40px;
-    background: linear-gradient(#84B290, white);
-  `
-  const Box = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
-    column-gap: 41vw;
-    row-gap: 8vh;
-    justify-items: center;
-  `
-  const Container = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
-    justify-items: center;
-    grid-column: span 2;
-    text-align: center;
-  `
-  const TitleWrapper = styled.div`
-    grid-column: span 2;
-    align-items: center;
-  `
-  const Title = styled.div`
-    color: white;
-    font-size: 35px;
-    font-weight: 600;
-    margin-bottom: 20px;
-  `
-  const ArrowLeft = styled.img`
-    margin-right: 160%;
-  `
-  const ArrowRight = styled.img`
-    margin-left: 160%;
-  `
-  const Text = styled.div`
-    font-weight: 400;
-    font-size: 28px;
-    margin-top: 40%;
-    text-align: left;
-  `
-  const BottomContent = styled.div`
-    display: grid;
-    grid-template-columns: 48.2% auto;
-    grid-template-rows: 85%;
-    height: 818px;
-  `
-  const More = styled.div`
-    margin-right: 70%;
-  `
-  const IndicatorContent = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 30%);
-    grid-template-rows: repeat(3, 30%);
-    position: relative;
-    top: 55%;
-    left: 50%; 
-  `
-  const TitleProcent = styled.div`
-    color: #0B6623;
-  `
-  const IndicatorText = styled.div`
-    font-size: 25px;
-    width: 10%;
-  `
+const Wrapper = styled.div`
+  border-top: 2px solid #0B6623; 
+  text-align: center;
+  padding: 80px 40px 0 40px;
+  background: linear-gradient(#84B290, white);
+`
+const Box = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  column-gap: 41vw;
+  row-gap: 8vh;
+  justify-items: center;
+`
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  justify-items: center;
+  grid-column: span 2;
+  text-align: center;
+`
+const TitleWrapper = styled.div`
+  grid-column: span 2;
+  align-items: center;
+`
+const Title = styled.div`
+  color: white;
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 20px;
+`
+const ArrowLeft = styled.img`
+  margin-right: 160%;
+`
+const ArrowRight = styled.img`
+  margin-left: 160%;
+`
+const Text = styled.div`
+  font-weight: 400;
+  font-size: 28px;
+  margin-top: 40%;
+  text-align: left;
+`
+const BottomContent = styled.div`
+  display: grid;
+  grid-template-columns: 48.2% auto;
+  grid-template-rows: 85%;
+  height: 818px;
+`
+const More = styled.div`
+  margin-right: 70%;
+`
+const IndicatorContent = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 30%);
+  grid-template-rows: repeat(3, 30%);
+  position: relative;
+  top: 55%;
+  left: 50%; 
+`
+const TitleProcent = styled.div`
+  color: #0B6623;
+`
+const IndicatorText = styled.div`
+  font-size: 25px;
+  width: 10%;
+`
