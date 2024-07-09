@@ -35,7 +35,7 @@ export const Header = () => {
     {
       key: '4',
       label: 'Задания',
-      link: '/tasks'  
+      link: '/tasks'
     }
   ]
 
@@ -44,21 +44,26 @@ export const Header = () => {
       <Link to={item.link}>{item.label}</Link>
     </Menu.Item>
   ))
-  
+
   return (
     <Wrapper>
       <MenuWrapper>
         <MenuButton onClick={showDrawer} type='link' icon={<img src={menu} />} />
-        <img src={logo} alt="logo" style={{ marginLeft: '35px' }} />
+        <Link to={"/"}>
+          <img src={logo} alt="logo" style={{ marginLeft: '35px' }} />
+        </Link>
       </MenuWrapper>
-      <Flex gap={10} style={{width: '40%'}}>
-        <LoginButton type="primary">
-          Войти
-        </LoginButton>
-
-        <LoginButton type="primary">
-          Зарегистрироваться
-        </LoginButton>
+      <Flex gap={10} style={{ width: '40%' }}>
+        <Link to={"/log-in"}>
+          <LoginButton type="primary">
+            Войти
+          </LoginButton>
+        </Link>
+        <Link to={"/sign-up"}>
+          <LoginButton type="primary">
+            Зарегистрироваться
+          </LoginButton>
+        </Link>
       </Flex>
       <MenuContent title="Меню" placement="left" onClose={onClose} visible={visible}>
         <MenuChildren>
@@ -89,7 +94,7 @@ const MenuButton = styled(Button)`
 const LoginButton = styled(Button)`
   border-radius: 30px;
   height: 45px;
-  width: 60%;
+  width: 30vh;
   color: #0B6623;
   background-color: white;
   margin-right: 40px;

@@ -6,7 +6,7 @@ export const Footer = () => {
     <Wrapper>
       <img src={logo} alt="logo" style={{ margin: 'auto', display: 'block' }} width={'10%'} />
       <CreateBy>
-        create by Pixel Pundits © {new Date().getFullYear()}
+        Created by Pixel Pundits © {new Date().getFullYear()}
       </CreateBy>
     </Wrapper>
   )
@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   background-color: #F5F5F5;
 `
 const CreateBy = styled.div`
-  margin-left: 44%;
+  margin-left: 45%;
   margin-top: 1%;
   margin-bottom: 1%;
   color: #0B6623;
