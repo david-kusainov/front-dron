@@ -26,6 +26,7 @@
     /* Alias */
     "baseUrl": "src",
     "paths": {
+      "@pages/*": ["pages/*"],
       "@widgets/*": ["widgets/*"],
       "@shared/*": ["shared/*"],
       "@features/*": ["features/*"],

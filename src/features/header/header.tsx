@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import logo from '@public/logo.svg'
 import { styled } from 'styled-components'
-import { Button, Drawer } from 'antd'
+import { Button, Drawer, Flex, Menu } from 'antd'
 import menu from '@public/menu.svg'
+import { Link } from 'react-router-dom'
 
 export const Header = () => {
   const [visible, setVisible] = useState(false)
@@ -15,19 +16,54 @@ export const Header = () => {
     setVisible(false)
   }
 
+  const menuItems = [
+    {
+      key: '1',
+      label: 'Домашняя страница',
+      link: '/'
+    },
+    {
+      key: '2',
+      label: 'Профиль',
+      link: '/users/user'
+    },
+    {
+      key: '3',
+      label: 'Создать задачу',
+      link: '/create/task'
+    },
+    {
+      key: '4',
+      label: 'Задания',
+      link: '/tasks'  
+    }
+  ]
+
+  const items = menuItems.map(item => (
+    <Menu.Item key={item.key}>
+      <Link to={item.link}>{item.label}</Link>
+    </Menu.Item>
+  ))
+  
   return (
     <Wrapper>
       <MenuWrapper>
         <MenuButton onClick={showDrawer} type='link' icon={<img src={menu} />} />
         <img src={logo} alt="logo" style={{ marginLeft: '35px' }} />
       </MenuWrapper>
-      <LoginButton type="primary">
-        Войти
-      </LoginButton>
+      <Flex gap={10} style={{width: '40%'}}>
+        <LoginButton type="primary">
+          Войти
+        </LoginButton>
+
+        <LoginButton type="primary">
+          Зарегистрироваться
+        </LoginButton>
+      </Flex>
       <MenuContent title="Меню" placement="left" onClose={onClose} visible={visible}>
-        <p>Пункт 1</p>
-        <p>Пункт 2</p>
-        <p>Пункт 3</p>
+        <MenuChildren>
+          {items}
+        </MenuChildren>
       </MenuContent>
     </Wrapper>
   )
@@ -49,12 +85,11 @@ const MenuButton = styled(Button)`
   background: none;
   color: white;
   font-size: 24px;
-
 `
 const LoginButton = styled(Button)`
   border-radius: 30px;
   height: 45px;
-  width: 20%;
+  width: 60%;
   color: #0B6623;
   background-color: white;
   margin-right: 40px;
@@ -71,4 +106,7 @@ const MenuContent = styled(Drawer)`
   .ant-drawer-title {
     color: #0B6623;
   }
+`
+const MenuChildren = styled(Menu)`
+  background-color: inherit;
 `
