@@ -3,7 +3,7 @@ import { SiteLayout } from "@widgets/layouts/site-layout"
 import { ForWhatBlock } from "@widgets/for-what/ui"
 import { TryService } from "@widgets/try-service/ui"
 
-export const Home = () => {
+export const HomePage = () => {
 
   return (
     <SiteLayout>

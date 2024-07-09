@@ -1,9 +1,17 @@
-import { Home } from "@pages/site/page";
-import { createBrowserRouter } from "react-router-dom";
+import { HomePage } from "@pages/site/index"
+import { createBrowserRouter } from "react-router-dom"
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <HomePage />,
   },
+  {
+    path: "log-in",
+    // element: <Home />,
+  },
+  {
+    path: "sign-up",
+    // element: <Home />,
+  }
 ])
