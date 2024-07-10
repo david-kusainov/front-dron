@@ -1,26 +1,30 @@
 import logo from '@public/logo.svg'
 import { styled } from 'styled-components'
 import { Button, Flex } from 'antd'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export const Header = () => {
+  const navigate = useNavigate()
+
+  const handleGoLogIn = () => {
+    navigate('/log-in')
+  }
+  const handleGoSignUp = () => {
+    navigate('/sign-up')
+  }
 
   return (
     <Wrapper>
       <Link to={"/"}>
         <img src={logo} alt="logo" />
       </Link>
-      <Flex gap={10} style={{ width: '40%' }}>
-        <Link to={"/log-in"}>
-          <LoginButton type="primary">
-            Войти
-          </LoginButton>
-        </Link>
-        <Link to={"/sign-up"}>
-          <LoginButton type="primary">
-            Зарегистрироваться
-          </LoginButton>
-        </Link>
+      <Flex gap={20} style={{ width: '40%' }}>
+        <LoginButton type="primary" onClick={handleGoLogIn}>
+          Войти
+        </LoginButton>
+        <LoginButton type="primary" onClick={handleGoSignUp}>
+          Зарегистрироваться
+        </LoginButton>
       </Flex>
     </Wrapper>
   )
