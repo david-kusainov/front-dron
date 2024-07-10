@@ -1,6 +1,6 @@
 import { InputField } from "@shared/inputs"
 import { PrivateWrapper } from "@shared/private-wrapper"
-import { ArchiveLayout } from "@widgets/layouts/create-layout"
+import { ArchiveLayout } from "@widgets/layouts/archive-layout"
 
 export const AreaArchivePage = () => {
   return (
