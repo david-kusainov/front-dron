@@ -11,7 +11,7 @@ export const AreaArchivePage = () => {
       <PrivateWrapper
         title={"Участок под пшеницу"}
         buttonText="Редактировать"
-        route="/private-office/area/:id"
+        route="/private-office/area/single"
       >
         <InputField 
           label="Название"

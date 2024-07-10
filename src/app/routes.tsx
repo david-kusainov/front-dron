@@ -6,6 +6,7 @@ import { AreaArchivePage } from "@pages/private-office/area/archive"
 import { createBrowserRouter } from "react-router-dom"
 import { AreaCreatePage } from "@pages/private-office/area/create"
 import { SignUpAdminPage } from "@pages/authentication/sign-up/admin"
+import { AreaSinglePage } from "@pages/private-office/area/single"
 
 export const router = createBrowserRouter([
   {
@@ -35,5 +36,9 @@ export const router = createBrowserRouter([
   {
     path: "private-office/area/create",
     element: <AreaCreatePage/>,
+  },
+  {
+    path: "private-office/area/single",
+    element: <AreaSinglePage/>,
   },
 ])

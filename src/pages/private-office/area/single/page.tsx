@@ -5,7 +5,7 @@ import { Radio, RadioChangeEvent, Space } from "antd"
 import { useState } from "react"
 import styled from "styled-components"
 
-export const AreaCreatePage = () => {
+export const AreaSinglePage = () => {
   const [value, setValue] = useState(0)
 
   const onChange = (e: RadioChangeEvent) => {
@@ -15,10 +15,10 @@ export const AreaCreatePage = () => {
 
   return (
     <CreateLayout
-      title="Создание нового участка"
+      title="Редактирование участка"
     >
       <PrivateWrapper
-        buttonText="Создать"
+        buttonText="Сохранить"
       >
         <Title>Название</Title>
         <InputField 
