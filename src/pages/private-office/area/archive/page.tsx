@@ -8,9 +8,10 @@ export const AreaArchivePage = () => {
       title="Мои участки" 
       route="/private-office/area/create"
     >
-      <PrivateWrapper 
+      <PrivateWrapper
         title={"Участок под пшеницу"}
         buttonText="Редактировать"
+        route="/private-office/area/:id"
       >
         <InputField 
           label="Название"
@@ -29,6 +30,7 @@ export const AreaArchivePage = () => {
       <PrivateWrapper 
         title={"Новый пустой участок"}
         buttonText="Редактировать"
+        route="/private-office/area/:id"
       >
         <InputField 
           label="Название"
@@ -47,6 +49,7 @@ export const AreaArchivePage = () => {
       <PrivateWrapper 
         title={"Поле"}
         buttonText="Редактировать"
+        route="/private-office/area/:id"
       >
         <InputField 
           label="Название"

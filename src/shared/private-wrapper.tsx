@@ -1,5 +1,6 @@
 import { Button } from "antd"
 import { ReactNode } from "react"
+import { useNavigate } from "react-router-dom"
 import { styled } from "styled-components"
 
 interface PrivateWrapperProps {
@@ -7,16 +8,31 @@ interface PrivateWrapperProps {
   title: string
   submit?: any
   buttonText?: string
+  route?: string
 }
 
-export const PrivateWrapper = ({children, title, submit, buttonText}: PrivateWrapperProps) => {
+export const PrivateWrapper = ({children, title, buttonText, route, submit}: PrivateWrapperProps) => {
+  const navigate = useNavigate()
+
+  const handleGo = () => {
+    if(route) {
+      navigate(route)
+    }
+  }
+
   return (
     <Wrapper>
       <Title>{title}</Title>
       {children}
-      <Button type="primary" ghost style={{borderRadius: '20px'}}>
-        {buttonText}
-      </Button>
+      {route ? (
+        <Button type="primary" ghost style={{borderRadius: '20px'}} onClick={handleGo}>
+          {buttonText}
+        </Button>
+      ) : (
+        <Button type="primary" ghost style={{borderRadius: '20px'}} onClick={submit}>
+          {buttonText}
+        </Button>
+      )}
     </Wrapper>
   )
 }
