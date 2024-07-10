@@ -1,14 +1,17 @@
 import { InputField } from "@shared/inputs"
 import { PrivateWrapper } from "@shared/private-wrapper"
 import { PrivateLayout } from "@widgets/layouts/private-layout"
-import { Button, Switch } from "antd"
+import { Switch } from "antd"
 import { styled } from "styled-components"
 
 export const ProfilePage = () => {
   return (
     <PrivateLayout>
       <Title>Профиль пользователя</Title>
-      <PrivateWrapper title={"Учетная запись"}>
+      <PrivateWrapper
+        title={"Учетная запись"}
+        buttonText="Обновить"  
+      >
         <InputField 
           label="ФИО"
         />
@@ -18,33 +21,28 @@ export const ProfilePage = () => {
         <InputField 
           label="Почта"
         />
-
-        <Button type="primary" block>
-          Обновить
-        </Button>
       </PrivateWrapper>
 
-      <PrivateWrapper title={"Доступ и безопасность"}>
+      <PrivateWrapper
+        title={"Доступ и безопасность"}
+        buttonText="Обновить"
+      >
         <InputField 
           label="Логин"
         />
         <InputField 
           label="Пароль"
         />
-
-        <Button type="primary" block>
-          Обновить
-        </Button>
       </PrivateWrapper>
 
-      <PrivateWrapper title={"Уведомления"}>
+      <PrivateWrapper
+        title={"Уведомления"}
+        buttonText="Обновить"  
+      >
         <Container>
           <div>Уведомления</div>
           <Switch />
         </Container>
-        <Button type="primary" block>
-          Обновить
-        </Button>
       </PrivateWrapper>
     </PrivateLayout>
   )

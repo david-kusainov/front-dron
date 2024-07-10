@@ -1,7 +1,6 @@
 import { InputField } from "@shared/inputs"
 import { PrivateWrapper } from "@shared/private-wrapper"
 import { Createayout } from "@widgets/layouts/create-layout"
-import { Button } from "antd"
 
 export const AreaArchivePage = () => {
   return (
@@ -9,7 +8,10 @@ export const AreaArchivePage = () => {
       title="Мои участки" 
       route="/private-office/area/create"
     >
-      <PrivateWrapper title={"Участок под пшеницу"}>
+      <PrivateWrapper 
+        title={"Участок под пшеницу"}
+        buttonText="Редактировать"
+      >
         <InputField 
           label="Название"
         />
@@ -22,12 +24,12 @@ export const AreaArchivePage = () => {
         <InputField 
           label="Посаженные культуры"
         />
-        <Button type="primary" ghost style={{borderRadius: '20px'}}>
-          Обновить
-        </Button>
       </PrivateWrapper>
 
-      <PrivateWrapper title={"Новый пустой участок"}>
+      <PrivateWrapper 
+        title={"Новый пустой участок"}
+        buttonText="Редактировать"
+      >
         <InputField 
           label="Название"
         />
@@ -40,12 +42,12 @@ export const AreaArchivePage = () => {
         <InputField 
           label="Посаженные культуры"
         />
-        <Button type="primary" ghost style={{borderRadius: '20px'}}>
-          Обновить
-        </Button>
       </PrivateWrapper>
 
-      <PrivateWrapper title={"Поле"}>
+      <PrivateWrapper 
+        title={"Поле"}
+        buttonText="Редактировать"
+      >
         <InputField 
           label="Название"
         />
@@ -58,9 +60,6 @@ export const AreaArchivePage = () => {
         <InputField 
           label="Посаженные культуры"
         />
-        <Button type="primary" ghost style={{borderRadius: '20px'}}>
-          Обновить
-        </Button>
       </PrivateWrapper>
     </Createayout>
   )

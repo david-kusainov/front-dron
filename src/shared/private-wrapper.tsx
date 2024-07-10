@@ -1,16 +1,22 @@
+import { Button } from "antd"
 import { ReactNode } from "react"
 import { styled } from "styled-components"
 
 interface PrivateWrapperProps {
   children: ReactNode
   title: string
+  submit?: any
+  buttonText?: string
 }
 
-export const PrivateWrapper = ({children, title}: PrivateWrapperProps) => {
+export const PrivateWrapper = ({children, title, submit, buttonText}: PrivateWrapperProps) => {
   return (
     <Wrapper>
       <Title>{title}</Title>
       {children}
+      <Button type="primary" ghost style={{borderRadius: '20px'}}>
+        {buttonText}
+      </Button>
     </Wrapper>
   )
 }
