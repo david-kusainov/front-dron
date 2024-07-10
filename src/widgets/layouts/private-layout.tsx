@@ -1,6 +1,6 @@
 import { Footer } from '@features/footer/footer'
 import { Header } from '@features/header/header'
-import { Drawer, Layout, Menu } from 'antd'
+import { Layout, Menu } from 'antd'
 import { Content} from 'antd/es/layout/layout'
 import Sider from 'antd/es/layout/Sider'
 import { ReactNode } from 'react'
@@ -22,12 +22,12 @@ export const PrivateLayout = ({ children }: SiteLayoutProps) => {
     {
       key: '2',
       label: 'Профиль',
-      link: 'private-office/profile'
+      link: '/private-office/profile'
     },
     {
       key: '3',
-      label: 'Создать задачу',
-      link: '/create/task'
+      label: 'Мои участки',
+      link: '/private-office/area'
     },
     {
       key: '4',

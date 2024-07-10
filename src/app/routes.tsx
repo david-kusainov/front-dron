@@ -2,6 +2,7 @@ import { HomePage } from "@pages/site"
 import { LogInPage } from "@pages/authentication/log-in"
 import { SignUpPage } from "@pages/authentication/sign-up"
 import { ProfilePage } from "@pages/private-office/profile"
+import { AreaSinglePage } from "@pages/private-office/area/archive"
 import { createBrowserRouter } from "react-router-dom"
 
 export const router = createBrowserRouter([
@@ -20,5 +21,9 @@ export const router = createBrowserRouter([
   {
     path: "private-office/profile",
     element: <ProfilePage />,
+  },
+  {
+    path: "private-office/area",
+    element: <AreaSinglePage />,
   },
 ])
