@@ -1,10 +1,11 @@
 import { HomePage } from "@pages/site"
 import { LogInPage } from "@pages/authentication/log-in"
-import { SignUpPage } from "@pages/authentication/sign-up"
+import { SignUpPage } from "@pages/authentication/sign-up/user"
 import { ProfilePage } from "@pages/private-office/profile"
 import { AreaArchivePage } from "@pages/private-office/area/archive"
 import { createBrowserRouter } from "react-router-dom"
 import { AreaCreatePage } from "@pages/private-office/area/create"
+import { SignUpAdminPage } from "@pages/authentication/sign-up/admin"
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([
   {
     path: "sign-up",
     element: <SignUpPage />,
+  },
+  {
+    path: "sign-up/admin",
+    element: <SignUpAdminPage />,
   },
   {
     path: "private-office/profile",

@@ -26,6 +26,8 @@ export const $$form = createForm({
     passwordCoppy:{
       init: ""
     },
-    
+    passwordAdmin:{
+      init: ""
+    },
   }
 })
