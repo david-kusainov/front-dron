@@ -3,7 +3,7 @@ import { PrivateWrapper } from "@shared/private-wrapper"
 import { Createayout } from "@widgets/layouts/create-layout"
 import { Button } from "antd"
 
-export const AreaSinglePage = () => {
+export const AreaArchivePage = () => {
   return (
     <Createayout 
       title="Мои участки" 

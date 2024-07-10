@@ -1,1 +1,1 @@
-export { AreaSinglePage } from './page'
+export { AreaArchivePage } from './page'
