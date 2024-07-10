@@ -10,7 +10,7 @@ interface SiteLayoutProps {
   route?: string
 }
 
-export const Createayout = ({ children, title, route }: SiteLayoutProps) => {
+export const ArchiveLayout = ({ children, title, route }: SiteLayoutProps) => {
   const navigate = useNavigate()
 
   const handleGo = () => {

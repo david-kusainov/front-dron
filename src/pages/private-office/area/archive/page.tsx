@@ -1,10 +1,10 @@
 import { InputField } from "@shared/inputs"
 import { PrivateWrapper } from "@shared/private-wrapper"
-import { Createayout } from "@widgets/layouts/create-layout"
+import { ArchiveLayout } from "@widgets/layouts/create-layout"
 
 export const AreaArchivePage = () => {
   return (
-    <Createayout 
+    <ArchiveLayout 
       title="Мои участки" 
       route="/private-office/area/create"
     >
@@ -64,6 +64,6 @@ export const AreaArchivePage = () => {
           label="Посаженные культуры"
         />
       </PrivateWrapper>
-    </Createayout>
+    </ArchiveLayout>
   )
 }
