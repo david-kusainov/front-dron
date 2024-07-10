@@ -5,7 +5,7 @@ import { styled } from "styled-components"
 
 interface PrivateWrapperProps {
   children: ReactNode
-  title: string
+  title?: string
   submit?: any
   buttonText?: string
   route?: string
@@ -22,14 +22,16 @@ export const PrivateWrapper = ({children, title, buttonText, route, submit}: Pri
 
   return (
     <Wrapper>
-      <Title>{title}</Title>
+      {title && (
+        <Title>{title}</Title>
+      )}
       {children}
       {route ? (
-        <Button type="primary" ghost style={{borderRadius: '20px'}} onClick={handleGo}>
+        <Button type="primary" ghost style={{borderRadius: '20px', display: 'block'}} onClick={handleGo}>
           {buttonText}
         </Button>
       ) : (
-        <Button type="primary" ghost style={{borderRadius: '20px'}} onClick={submit}>
+        <Button type="primary" ghost style={{borderRadius: '20px', display: 'block'}} onClick={submit}>
           {buttonText}
         </Button>
       )}
