@@ -1,12 +1,22 @@
 import { InputField } from "@shared/inputs"
 import { useForm } from "effector-forms"
-import { $$form } from "./model"
+import { $$form } from "../model"
 import { Button, Form } from "antd"
 import { styled } from "styled-components"
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
-export const SignUpForm = () => {
+export const SignUpAdminForm = () => {
   const { fields } = useForm($$form)
+  const navigate = useNavigate()
+
+  const handleUser = () => {
+    navigate('/sign-up')
+  }
+
+  const handleLogIn = () => {
+    navigate('/log-in')
+  }
+
   return (
     <Box>
       <Title>
@@ -14,6 +24,15 @@ export const SignUpForm = () => {
       </Title>
 
       <StyledForm>
+      <Selection>  
+          <Button onClick={handleUser} type="primary" block style={{ borderRadius: '30px', width: '40%' }}>
+            Пользователь
+          </Button>
+          <Button disabled type="primary" block style={{ borderRadius: '30px', width: '40%' }}>
+            Администратор
+          </Button>
+        </Selection>
+
         <InputField
           placeholder="Имя"
           field={fields.name}
@@ -40,6 +59,11 @@ export const SignUpForm = () => {
           size="large"
         />
         <InputField
+          placeholder="Введите пароль администратора"
+          field={fields.passwordAdmin}
+          size="large"
+        />
+        <InputField
           placeholder="Придумайте логин"
           field={fields.login}
           size="large"
@@ -62,13 +86,16 @@ export const SignUpForm = () => {
 
       <Registrate>
         <span>Уже есть аккаунт?</span>
-        <Link to={"/log-in"}>
-          <span style={{ color: '#0B6623', marginLeft: '5px' }}>Войти</span>
-        </Link>
+          <span onClick={handleLogIn} style={{ color: '#0B6623', marginLeft: '5px' }}>Войти</span>
       </Registrate>
     </Box>
   )
 }
+
+const Selection = styled(Form)`
+  display: flex;
+  justify-content: space-between;
+`
 
 const Registrate = styled(Form)`
   margin: 44px auto 0 auto;
