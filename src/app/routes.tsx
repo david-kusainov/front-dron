@@ -7,6 +7,8 @@ import { createBrowserRouter } from "react-router-dom"
 import { AreaCreatePage } from "@pages/private-office/area/create"
 import { SignUpAdminPage } from "@pages/authentication/sign-up/admin"
 import { AreaSinglePage } from "@pages/private-office/area/single"
+import { QueryArchivePage } from "@pages/private-office/query/archive"
+import { QueryCreatePage } from "@pages/private-office/query/create"
 
 export const router = createBrowserRouter([
   {
@@ -35,10 +37,18 @@ export const router = createBrowserRouter([
   },
   {
     path: "private-office/area/create",
-    element: <AreaCreatePage/>,
+    element: <AreaCreatePage />,
   },
   {
     path: "private-office/area/single",
-    element: <AreaSinglePage/>,
+    element: <AreaSinglePage />,
+  },
+  {
+    path: "private-office/query",
+    element: <QueryArchivePage />,
+  },
+  {
+    path: "private-office/query/create",
+    element: <QueryCreatePage />,
   },
 ])

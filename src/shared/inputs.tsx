@@ -1,7 +1,38 @@
-import { Input, InputProps } from "antd"
+import { Input, InputProps, Select, SelectProps } from "antd"
 import { ConnectedField } from "effector-forms"
 import { ReactNode, useEffect } from "react"
 import { styled } from "styled-components"
+
+export interface SelectFieldProps<T> extends SelectProps, FieldProps<T> {
+}
+
+export function SelectField<T>(props: SelectFieldProps<T>) {
+  useEffect(() => {
+    if (props.setValueField)
+      props.field?.set(props.setValueField)
+  }, [props.setValueField])
+
+  return (
+    <FieldWithLabelColumn>
+      <Label label={props.label} required={props.required} />
+      <Select
+        bordered
+        allowClear
+        showSearch
+        defaultActiveFirstOption
+        value={props.mode === 'multiple' && props.field && props.field.value !== null ? props.field && props.field.value : props.mode !== 'multiple' ? props.field && props.field.value : undefined}
+        // @ts-ignore
+        onChange={(value: any, option: any) => {
+          props.field && props.field.onChange(value as any)
+          if (props.onChange) props.onChange(value, option)
+        }}
+        options={props.options}
+        {...props}
+      />
+      {props.field && <ErrorValidate field={props.field} />}
+    </FieldWithLabelColumn>
+  )
+}
 
 interface FieldProps<T> {
   field?: ConnectedField<T>

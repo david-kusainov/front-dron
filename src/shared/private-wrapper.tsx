@@ -26,11 +26,13 @@ export const PrivateWrapper = ({children, title, buttonText, route, submit}: Pri
         <Title>{title}</Title>
       )}
       {children}
-      {route ? (
+      {route && buttonText && (
         <Button type="primary" ghost style={{borderRadius: '20px', display: 'block'}} onClick={handleGo}>
           {buttonText}
         </Button>
-      ) : (
+      )}
+
+      {submit && buttonText && (
         <Button type="primary" ghost style={{borderRadius: '20px', display: 'block'}} onClick={submit}>
           {buttonText}
         </Button>

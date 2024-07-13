@@ -13,12 +13,17 @@ export const AreaCreatePage = () => {
     setValue(e.target.value)
   }
 
+  const handleClick = () => {
+    console.log('заглушка')
+  }
+
   return (
     <CreateLayout
       title="Создание нового участка"
     >
       <PrivateWrapper
         buttonText="Создать"
+        submit={handleClick}
       >
         <Title>Название</Title>
         <InputField 

@@ -31,8 +31,8 @@ export const PrivateLayout = ({ children }: SiteLayoutProps) => {
     },
     {
       key: '4',
-      label: 'Задания',
-      link: '/tasks'
+      label: 'Мои запросы',
+      link: '/private-office/query'
     }
   ]
 
