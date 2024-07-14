@@ -33,6 +33,11 @@ export const PrivateLayout = ({ children }: SiteLayoutProps) => {
       key: '4',
       label: 'Мои запросы',
       link: '/private-office/query'
+    },
+    {
+      key: '5',
+      label: 'Список пользователей',
+      link: '/private-office/users'
     }
   ]
 

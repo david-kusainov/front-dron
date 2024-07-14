@@ -9,6 +9,7 @@ import { SignUpAdminPage } from "@pages/authentication/sign-up/admin"
 import { AreaSinglePage } from "@pages/private-office/area/single"
 import { QueryArchivePage } from "@pages/private-office/query/archive"
 import { QueryCreatePage } from "@pages/private-office/query/create"
+import { UserArchivePage } from "@pages/private-office/user/archive"
 
 export const router = createBrowserRouter([
   {
@@ -50,5 +51,9 @@ export const router = createBrowserRouter([
   {
     path: "private-office/query/create",
     element: <QueryCreatePage />,
+  },
+  {
+    path: "private-office/users",
+    element: <UserArchivePage />,
   },
 ])
