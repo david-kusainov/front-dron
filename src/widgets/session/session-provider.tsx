@@ -1,7 +1,7 @@
 import { ReactNode, createContext, useContext, useEffect, useState } from 'react'
 import { JwtPayload } from 'jsonwebtoken'
-import { verifyToken } from '@features/api/auth-chaker'
 import { useNavigate } from 'react-router-dom'
+import { verifyToken } from '@features/api/auth-checker'
 
 const SessionContext = createContext<JwtPayload | null>(null)
 
