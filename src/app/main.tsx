@@ -5,7 +5,7 @@ import { ConfigProvider } from 'antd'
 import { RouterProvider } from 'react-router-dom'
 import { router } from './routes'
 import './index.css'
-import { SessionProvider } from '@widgets/session/session-provaider'
+import { SessionProvider } from '@widgets/session/session-provider'
 
 const customTheme = {
   token: {
