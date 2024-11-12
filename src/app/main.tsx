@@ -5,7 +5,7 @@ import { ConfigProvider } from 'antd'
 import { RouterProvider } from 'react-router-dom'
 import { router } from './routes'
 import './index.css'
-import { SessionProvider } from '@widgets/session/session-provider'
+// import { SessionProvider } from '@widgets/session/session-provider'
 
 const customTheme = {
   token: {
@@ -16,9 +16,9 @@ const customTheme = {
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ConfigProvider theme={customTheme}>
-      <SessionProvider>
+      {/* <SessionProvider> */}
         <RouterProvider router={router} />
-      </SessionProvider>
+      {/* </SessionProvider> */}
     </ConfigProvider>
   </React.StrictMode>
 )
